@@ -1,3 +1,9 @@
+/* 
+Bluetooth HC-05 Module with Arduin Uno
+Code for Receiver.
+
+By: MeqdadDev
+*/
 const int ledPin = 13;  // Change this to the pin where your LED is connected
 const int buzzerPin = 12;
 

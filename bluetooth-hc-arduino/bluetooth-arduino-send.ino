@@ -1,3 +1,10 @@
+/* 
+Bluetooth HC-05 Module with Arduin Uno
+Code for Sender.
+
+By: MeqdadDev
+*/
+
 const int buttonPin = 8;  // Change this to the pin where your button is connected
 int buttonState = 0;
 
