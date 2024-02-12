@@ -1,6 +1,5 @@
 /*
 Gaz/Smoke Alarm System
-Code for Sender.
 
 By: MeqdadDev
 */
