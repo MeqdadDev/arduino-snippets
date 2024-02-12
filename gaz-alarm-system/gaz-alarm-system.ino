@@ -10,7 +10,7 @@ By: MeqdadDev
 #define buzzerPin 7
 #define motorPin 4
 
-float sensorValue; // variable to store sensor value
+float sensorValue;
 
 void setup()
 {
@@ -21,7 +21,7 @@ void setup()
     pinMode(buzzerPin, OUTPUT);
     pinMode(motorPin, OUTPUT);
     pinMode(MQ2pin, INPUT);
-    delay(20000); // allow the MQ2 to warm up
+    delay(20000);       // Allow the MQ2 to warm up
 }
 
 void loop()
