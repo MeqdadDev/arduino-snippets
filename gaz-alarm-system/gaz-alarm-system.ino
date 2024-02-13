@@ -4,13 +4,13 @@ Gaz/Smoke Alarm System
 By: MeqdadDev
 */
 
-#define MQ2pin 0
+#define MQ2pin 2
 #define greenLedPin 9
 #define redLedPin 13
 #define buzzerPin 7
 #define motorPin 4
 
-float sensorValue;
+float sensorValue; // variable to store sensor value
 
 void setup()
 {
@@ -21,22 +21,23 @@ void setup()
     pinMode(buzzerPin, OUTPUT);
     pinMode(motorPin, OUTPUT);
     pinMode(MQ2pin, INPUT);
-    delay(20000);       // Allow the MQ2 to warm up
+    delay(3000); // allow the MQ2 to warm up
 }
 
 void loop()
 {
-    sensorValue = analogRead(MQ2pin); // read Gaz value from sensor
+    sensorValue = digitalRead(MQ2pin); // read Gaz value from sensor
 
     Serial.print("MQ2 Sensor Value: ");
     Serial.println(sensorValue);
 
-    if (sensorValue >= 360)
+    if (!sensorValue)
     {
         digitalWrite(redLedPin, HIGH);
         digitalWrite(greenLedPin, LOW);
         digitalWrite(buzzerPin, HIGH);
         digitalWrite(motorPin, HIGH);
+        delay(2000);
     }
     else
     {
@@ -45,5 +46,4 @@ void loop()
         digitalWrite(buzzerPin, LOW);
         digitalWrite(motorPin, LOW);
     }
-    delay(2000); // wait 2s for next reading
 }
