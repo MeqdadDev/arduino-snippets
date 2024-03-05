@@ -1,3 +1,9 @@
+/*
+Automatic Parking System with Arduino
+
+By: MeqdadDev
+*/
+
 #include <Servo.h>
 
 // Define pin numbers for ultrasonic sensor
